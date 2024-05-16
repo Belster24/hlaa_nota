@@ -1,0 +1,108 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 128,
+			"width": 216
+		}
+	},
+	"inputs": [ {
+		"command": "BETS_UNIT",
+		"name": "unit"
+	}, {
+		"command": "BETS_POSITION",
+		"name": "pos"
+	} ],
+	"outputs": [],
+	"properties": {
+		"1FvGRtQx4TTVZZ3jtCJ688P8iBOCMkBF": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 491,
+			"y": 52
+		},
+		"3im7h8a2UfHpse7dOngIQUcxphueJNkU": {
+			"height": 132,
+			"title": "formation.moveCustomGroup",
+			"width": 269,
+			"x": 488,
+			"y": 169
+		},
+		"QzuxetSwQgYaer9dqXZ1iIWpnCbGRjBe": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 287,
+			"y": 19
+		},
+		"uOsocHN7ArZZJrggqknDmYlm753pKg77": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 487,
+			"y": -50
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "uOsocHN7ArZZJrggqknDmYlm753pKg77",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "u"
+			}, {
+				"name": "value",
+				"value": "{}"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "1FvGRtQx4TTVZZ3jtCJ688P8iBOCMkBF",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "u[unit]"
+			}, {
+				"name": "value",
+				"value": "1"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "3im7h8a2UfHpse7dOngIQUcxphueJNkU",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "groupDefintion",
+				"value": "u"
+			}, {
+				"name": "position",
+				"value": "pos"
+			}, {
+				"name": "formation",
+				"value": "{Vec3(0,0,0)}"
+			}, {
+				"name": "fight",
+				"value": "false"
+			}, {
+				"name": "scriptName",
+				"value": "formation.moveCustomGroup"
+			} ],
+			"scriptName": "formation.moveCustomGroup"
+		} ],
+		"id": "QzuxetSwQgYaer9dqXZ1iIWpnCbGRjBe",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}
