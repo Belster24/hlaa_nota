@@ -1,7 +1,7 @@
 local sensorInfo = {
 	name = "Capture Hill",
 	desc = "Capture all hills on the map.",
-	author = "Zivnustka",
+	author = "Zivnustka", --with help from Fileho
 	date = "2024-05-13",
 	license = "none",
 }

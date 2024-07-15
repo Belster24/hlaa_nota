@@ -20,8 +20,8 @@
 			"height": 72,
 			"title": "wait",
 			"width": 131,
-			"x": 2189,
-			"y": 41
+			"x": 2187,
+			"y": -297
 		},
 		"L7fwAsPQExKqnsnFCU5tPC3NzhFIiNKs": {
 			"height": 94,
@@ -47,9 +47,16 @@
 		"U1QSQwHeQKv3EAz3w1fw36sfVncvJ0Fw": {
 			"height": 151,
 			"title": "reference",
-			"width": 257,
-			"x": 1533,
-			"y": 638
+			"width": 264,
+			"x": 2401,
+			"y": 624
+		},
+		"XjU4sOhK57sSGpjgbkZFcStMeunxJevS": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1710,
+			"y": 20
 		},
 		"aaI5twbjt6Q6tH7xTFsezPOqNXlMO1Pt": {
 			"height": 100,
@@ -69,8 +76,8 @@
 			"height": 90,
 			"title": "Common.move",
 			"width": 558,
-			"x": 2113,
-			"y": 161
+			"x": 2155,
+			"y": -171
 		},
 		"gucjBjw5wrKHDUK0izHGpkD71U34opAv": {
 			"height": 60,
@@ -83,50 +90,43 @@
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 1612,
-			"y": 123
-		},
-		"kp2k0G1WC3sn1Zqpjp3smGMkMvvw8CXE": {
-			"height": 72,
-			"title": "echo",
-			"width": 150,
-			"x": 1089,
-			"y": -286
+			"x": 1736,
+			"y": -167
 		},
 		"pAoWKnQmD2zYnOM0vYyT37G9pBUBpvCu": {
 			"height": 151,
 			"title": "reference",
-			"width": 257,
-			"x": 1535,
-			"y": 484
+			"width": 264,
+			"x": 2417,
+			"y": 470
 		},
 		"sKVUNVOQpaQiVpp3BDrWA4c2vAVotJaD": {
 			"height": 94,
 			"title": "store",
 			"width": 293,
-			"x": 1556,
-			"y": 234
+			"x": 1984,
+			"y": 130
 		},
 		"v5juykbAovw4dX180MLMt4iGbHDh36Jm": {
 			"height": 151,
 			"title": "reference",
-			"width": 257,
-			"x": 1536,
-			"y": 336
+			"width": 264,
+			"x": 2382,
+			"y": 298
 		},
 		"vAU6OPT8higQsBACvKa8PBCBz6iKycM5": {
 			"height": 90,
 			"title": "Common.move",
 			"width": 554,
-			"x": 2067,
-			"y": -187
+			"x": 1958,
+			"y": -404
 		},
 		"wELnJAgSH04oTnrMvqWtdHuFa2tXPTuj": {
 			"height": 70,
 			"title": "parallel",
 			"width": 202,
-			"x": 1254,
-			"y": 361
+			"x": 1976,
+			"y": 439
 		},
 		"zny2u6ALaffH59z6KyLg3ivgQ2DBd8OE": {
 			"height": 72,
@@ -137,11 +137,14 @@
 		}
 	},
 	"roles": [ {
-		"categories": [ "nota_zivnutka_mb.bear" ],
+		"categories": [ "hlaa_nota_zivnusm.bear" ],
 		"name": "bear"
 	}, {
-		"categories": [ "nota_zivnutka_mb.others" ],
-		"name": "others"
+		"categories": [ "hlaa_nota_zivnusm.pewe" ],
+		"name": "pewee"
+	}, {
+		"categories": [ "hlaa_nota_zivnusm.warrior" ],
+		"name": "warrior"
 	} ],
 	"root": {
 		"children": [ {
@@ -160,18 +163,6 @@
 					"value": "store"
 				} ],
 				"scriptName": "store"
-			}, {
-				"children": [],
-				"id": "kp2k0G1WC3sn1Zqpjp3smGMkMvvw8CXE",
-				"nodeType": "luaCommand",
-				"parameters": [ {
-					"name": "msg",
-					"value": "missionInfo"
-				}, {
-					"name": "scriptName",
-					"value": "echo"
-				} ],
-				"scriptName": "echo"
 			}, {
 				"children": [ {
 					"children": [],
@@ -216,6 +207,82 @@
 					"id": "iRliSlbS4cjczTifDcvlI2PrDDf2Q7a0",
 					"nodeType": "sequence",
 					"parameters": []
+				}, {
+					"children": [ {
+						"children": [],
+						"id": "sKVUNVOQpaQiVpp3BDrWA4c2vAVotJaD",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "hillCapture"
+						}, {
+							"name": "value",
+							"value": "CaptureHill()"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [ {
+							"children": [],
+							"id": "v5juykbAovw4dX180MLMt4iGbHDh36Jm",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "hlaa_nota_zivnusm.moveUnit"
+							} ],
+							"referenceInputs": [ {
+								"name": "unit",
+								"value": "units[1]"
+							}, {
+								"name": "pos",
+								"value": "hillCapture[1]"
+							} ],
+							"referenceOutputs": []
+						}, {
+							"children": [],
+							"id": "pAoWKnQmD2zYnOM0vYyT37G9pBUBpvCu",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "hlaa_nota_zivnusm.moveUnit"
+							} ],
+							"referenceInputs": [ {
+								"name": "unit",
+								"value": "units[2]"
+							}, {
+								"name": "pos",
+								"value": "hillCapture[2]"
+							} ],
+							"referenceOutputs": []
+						}, {
+							"children": [],
+							"id": "U1QSQwHeQKv3EAz3w1fw36sfVncvJ0Fw",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "hlaa_nota_zivnusm.moveUnit"
+							} ],
+							"referenceInputs": [ {
+								"name": "unit",
+								"value": "units[3]"
+							}, {
+								"name": "pos",
+								"value": "hillCapture[3]"
+							} ],
+							"referenceOutputs": []
+						} ],
+						"id": "wELnJAgSH04oTnrMvqWtdHuFa2tXPTuj",
+						"nodeType": "parallel",
+						"parameters": [ {
+							"name": "mode",
+							"value": "all-success"
+						} ]
+					} ],
+					"id": "XjU4sOhK57sSGpjgbkZFcStMeunxJevS",
+					"nodeType": "sequence",
+					"parameters": []
 				} ],
 				"id": "QvE9qcTW9tfHtDmiJri104On3VVTXrOi",
 				"nodeType": "roleSplit",
@@ -246,77 +313,6 @@
 			"children": [ {
 				"children": [ {
 					"children": [],
-					"id": "sKVUNVOQpaQiVpp3BDrWA4c2vAVotJaD",
-					"nodeType": "luaCommand",
-					"parameters": [ {
-						"name": "var",
-						"value": "hillCapture"
-					}, {
-						"name": "value",
-						"value": "CaptureHill()"
-					}, {
-						"name": "scriptName",
-						"value": "store"
-					} ],
-					"scriptName": "store"
-				}, {
-					"children": [ {
-						"children": [],
-						"id": "v5juykbAovw4dX180MLMt4iGbHDh36Jm",
-						"nodeType": "reference",
-						"parameters": [ {
-							"name": "behaviourName",
-							"value": "nota_zivnutka_mb.moveUnit"
-						} ],
-						"referenceInputs": [ {
-							"name": "unit",
-							"value": "units[1]"
-						}, {
-							"name": "pos",
-							"value": "hillCapture[1]"
-						} ],
-						"referenceOutputs": []
-					}, {
-						"children": [],
-						"id": "pAoWKnQmD2zYnOM0vYyT37G9pBUBpvCu",
-						"nodeType": "reference",
-						"parameters": [ {
-							"name": "behaviourName",
-							"value": "nota_zivnutka_mb.moveUnit"
-						} ],
-						"referenceInputs": [ {
-							"name": "unit",
-							"value": "units[2]"
-						}, {
-							"name": "pos",
-							"value": "hillCapture[2]"
-						} ],
-						"referenceOutputs": []
-					}, {
-						"children": [],
-						"id": "U1QSQwHeQKv3EAz3w1fw36sfVncvJ0Fw",
-						"nodeType": "reference",
-						"parameters": [ {
-							"name": "behaviourName",
-							"value": "nota_zivnutka_mb.moveUnit"
-						} ],
-						"referenceInputs": [ {
-							"name": "unit",
-							"value": "units[3]"
-						}, {
-							"name": "pos",
-							"value": "hillCapture[3]"
-						} ],
-						"referenceOutputs": []
-					} ],
-					"id": "wELnJAgSH04oTnrMvqWtdHuFa2tXPTuj",
-					"nodeType": "parallel",
-					"parameters": [ {
-						"name": "mode",
-						"value": "all-success"
-					} ]
-				}, {
-					"children": [],
 					"id": "zny2u6ALaffH59z6KyLg3ivgQ2DBd8OE",
 					"nodeType": "luaCommand",
 					"parameters": [ {
@@ -346,7 +342,7 @@
 			"value": "turret_destroyed == nil"
 		}, {
 			"name": "repeat",
-			"value": "false"
+			"value": "true"
 		} ]
 	}
 }
