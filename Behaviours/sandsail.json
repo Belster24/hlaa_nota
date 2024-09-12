@@ -105,8 +105,8 @@
 		"categories": [ "hlaa_nota_zivnusm.commnader" ],
 		"name": "Default role"
 	}, {
-		"categories": [ "Common.airUnits", "Common.bomberAirUnits", "Common.builders", "Common.fighterAirUnits", "Common.groundUnits", "Common.transports" ],
-		"name": "Role 2"
+		"categories": [],
+		"name": "Role 1"
 	} ],
 	"root": {
 		"children": [ {
