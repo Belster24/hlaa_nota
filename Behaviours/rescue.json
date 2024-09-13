@@ -145,7 +145,7 @@
 		},
 		"bOMM3Un3T0mXBjMEyVduDnXj2QLxDGdY": {
 			"height": 94,
-			"title": "storeStillStrandedUids (parallel hack to filter out units as soon as they're saved -> in case they drift away)",
+			"title": "storeStillStrandedUids",
 			"width": 745,
 			"x": 950,
 			"y": 805

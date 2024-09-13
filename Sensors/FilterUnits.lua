@@ -22,7 +22,12 @@ VFS.Include(modules.attach.data.path .. modules.attach.data.head) -- attach lib 
 local SpringGetUnitPosition = Spring.GetUnitPosition
 function GetPosition(uid) 
 	local x,y,z = SpringGetUnitPosition(uid)
-	return Vec3(x,y,z)
+
+	if y >= 2 then
+		return Vec3(x,y,z)
+	end
+
+	return nil
 end
 
 -- @description filters out unit ids that corresponds to units in certain area
@@ -36,9 +41,12 @@ return function(uids, areaCenter, areaRadius)
 		local uid = uids[i]
 		local unitLoc = GetPosition(uid)
 
-		if areaCenter:Distance(unitLoc) > areaRadius then
-			notFilteredUIds[j] = uid
-			j = j + 1
+		if unitLoc ~= nil then
+
+			if areaCenter:Distance(unitLoc) > areaRadius then
+				notFilteredUIds[j] = uid
+				j = j + 1
+			end
 		end
 	end
 
