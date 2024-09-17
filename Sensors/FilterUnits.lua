@@ -23,7 +23,7 @@ local SpringGetUnitPosition = Spring.GetUnitPosition
 function GetPosition(uid) 
 	local x,y,z = SpringGetUnitPosition(uid)
 
-	if y >= 2 then
+	if y >= 0 then
 		return Vec3(x,y,z)
 	end
 
